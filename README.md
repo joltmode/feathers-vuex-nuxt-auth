@@ -21,4 +21,4 @@ New user will be created:
 - iamnoadminhere
 
 Nuxt's `index.vue` will automatically display login form and display user data upon logging in.  
-Upon refresh, if full user data won't be available, a <kbd>Get user data</kbd> button will show up. The button will try to `populateUser`.
+Upon refresh, if full user data won't be available, a <kbd>Get user data</kbd> button will show up. The button will try to `dispatch('auth/populateUser')`.
