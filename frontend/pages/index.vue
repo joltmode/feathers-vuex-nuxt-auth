@@ -35,7 +35,8 @@
         <button type="submit">Sign in</button>
       </form>
       <div v-else>
-        <pre>{{ userData }}</pre>
+        <pre v-if="userData">{{ userData }}</pre>
+        <button v-else @click="getUser">Get user data</button>
         <pre>{{ accessToken }}</pre>
         <button @click="logout">Sign out</button>
       </div>
@@ -66,7 +67,8 @@ export default {
   methods: {
     ...mapActions({
       login: 'auth/authenticate',
-      logout: 'auth/logout'
+      logout: 'auth/logout',
+      populateUser: 'auth/populateUser'
     }),
     tryLogin () {
       this.login({
@@ -74,6 +76,9 @@ export default {
         email: this.email,
         password: this.password
       })
+    },
+    getUser () {
+      this.populateUser(this.$store.state.auth.payload.userId)
     }
   },
   components: {
