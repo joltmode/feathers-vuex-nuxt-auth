@@ -12,7 +12,7 @@ cd frontend
 yarn dev
 ```
 
-Feathers listens on `localhost:3030` (default)
+Feathers listens on `localhost:3030` (default)  
 Nuxt on `localhost:3000` (default)
 
 Feathers uses NeDB.  
