@@ -3,13 +3,13 @@
 Start backend:
 ```
 cd backend
-yarn start
+yarn install && yarn start
 ```
 
 Start frontend:
 ```
 cd frontend
-yarn dev
+yarn install && yarn dev
 ```
 
 Feathers listens on `localhost:3030` (default)  
